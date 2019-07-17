@@ -52,6 +52,10 @@ else if ($mensaje == "SI"){
 	file_get_contents($website."/sendmessage?parse_mode=Markdown&chat_id=" . $chatId . "&text=" . urlencode($content) );	
 	file_get_contents($website."/sendmessage?parse_mode=Markdown&chat_id=" . $chatId . "&text=" . urlencode($chatId) );}
 
+else if ($mensaje == "NO"){
+	$content = "Entendido. Nos vemos pronto";
+	file_get_contents($website."/sendmessage?parse_mode=Markdown&chat_id=" . $chatId . "&text=" . urlencode($content) );}
+
 else if($mensaje == $chatId){
 	
 	$conected = new mysqli($host_db, $user_db, $pass_db) or die(mysqli_error());
